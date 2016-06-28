@@ -1,0 +1,547 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?43804300');
+  src: url('../font/fontello.eot?43804300#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?43804300') format('woff2'),
+       url('../font/fontello.woff?43804300') format('woff'),
+       url('../font/fontello.ttf?43804300') format('truetype'),
+       url('../font/fontello.svg?43804300#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?43804300#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-star-circled:before { content: '\e800'; } /* '' */
+.icon-right-open:before { content: '\e801'; } /* '' */
+.icon-gplus-squared:before { content: '\e802'; } /* '' */
+.icon-vkontakte:before { content: '\e803'; } /* '' */
+.icon-facebook:before { content: '\e804'; } /* '' */
+.icon-location:before { content: '\e805'; } /* '' */
+.icon-phone:before { content: '\e806'; } /* '' */
+.icon-mail-alt:before { content: '\e807'; } /* '' */
+.icon-menu:before { content: '\e808'; } /* '' */
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../font/Raleway-Bold.ttf)
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Arial", sans-serif;
+    font-size: 13px;
+    background-color: black
+}
+
+.container {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.no-hidden-overflow {
+    overflow: visible;
+}
+
+.main-nav {
+    position: relative;
+    height: 60px;
+    background-color: #0097f2;
+    z-index: 10;
+}
+
+.main-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 80%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #4296f3;
+    z-index: 100;
+}
+
+.unhide-menu {
+    display: block;
+}
+
+.main-menu a {  
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    display: inline-block;
+    padding: 20px 0;
+    border-top: 1px solid white;
+}
+
+.main-menu li {
+    text-align: center;
+}
+
+.main-menu .leave-request {
+    color: #4d4d4d;
+}
+
+.icon-right-open {
+    font-size: 1.3em;
+    color: #282828;
+}
+
+.open-menu-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 42px;
+    height: 38px;
+    background-color: #4897f3;
+    border: 0;
+    cursor: pointer;
+}
+
+.icon-menu {
+    color: white;
+    font-size: 2em;
+}
+
+.main-logo {
+    position: absolute;
+    top: 14px;
+    left: 3%;
+    z-index: 1;
+}
+
+.icon-star-circled {
+    color: white;
+    font-size: 1.3em;
+}
+
+h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.38em;
+    line-height: 1.38em;
+    text-align: center;
+    color: white;
+    margin: 9% 9% 20% 9%;
+    padding: 0;
+}
+
+main {
+    background-color: black;
+}
+
+.main-container {
+    position: relative;
+    z-index: 1;
+}
+
+.back-slider {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: url(../img/background-color-medium.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    z-index: -1;
+    animation: go-left-right 3s ease;
+}
+
+.background-left {
+    display: none;
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    margin-left: -280px;
+    background: url(../img/left-background.png);
+    z-index: 1;
+}
+
+@keyframes go-left-right {
+    from {
+        right: 200px;
+    }
+    
+    to {
+        right: 0px;
+    }
+}
+
+.mobile-users,
+.desctop-users {
+    font-family: "Open sans", sans-serif;
+    font-weight: 800;
+    font-size: 0.700em;
+    color: white;
+    margin-bottom: 24%
+}
+
+.mobile-users {
+    float: left;
+    width: 32%;
+    margin-left: 9%;
+}
+
+.desctop-users {
+    float: right;
+    width: 32%;
+    margin-right: 9%;
+}
+
+.mobile-users span,
+.desctop-users span {
+    font-size: 3.6em;
+    display: block;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    line-height: 1.429em;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    min-height: 500px;
+}
+
+footer span {
+    display: block;
+}
+
+.copyright,
+.social,
+.contacts {
+    margin: 0 6%;
+}
+
+.copyright {
+    margin-top: 9%;
+}
+
+.contacts {
+    margin-bottom: 6%;
+}
+
+.icon-gplus-squared,
+.icon-vkontakte,
+.icon-facebook,
+.icon-location,
+.icon-phone,
+.icon-mail-alt,
+.tel-time {
+    color: #373a3b;
+}
+
+.gplus-ref:hover,
+.vk-ref:hover,
+.fb-ref:hover {
+    color: #ed2059;
+    cursor: pointer;
+}
+
+/* Small Devices */
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+ 
+    .container {
+        max-width: 640px;
+    }
+    
+    body {
+        font-size: 15px;
+    }
+    
+    .desctop-users,
+    .mobile-users {
+        font-size: 1em;
+    }
+    
+    .mobile-users span,
+    .desctop-users span {
+        font-size: 4em;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .main-menu {
+        height: auto;
+    }
+    
+    .back-slider {
+        margin-top: -50px;
+    }
+    
+     .background-left {
+        display: none;
+    }
+}
+
+/* Medium Devices */
+@media only screen and (min-width: 641px) and (max-width: 980px) {
+    .container {
+        max-width: 980px;
+    }
+    
+    body {
+        font-size: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .open-menu-btn {
+        display: none;
+    }
+    
+    .main-menu {
+        display: inline-block;
+        position: static;
+        width: 100%;
+        margin-left: 9%;
+        height: 100%;
+    }
+    
+    .main-menu li {
+        display: inline-block;
+        margin-right: 1%;
+    }
+    
+    .main-menu a {
+        font-size: 0.7em;
+        border: 0;
+    }
+    
+    .main-menu .leave-request {
+        padding: 18px 0;
+    }
+    
+    .main-nav {
+        background-color: #4296f3;
+        overflow-x: hidden;
+    }
+    
+    .main-menu li:last-child {
+        position: absolute;
+        right: 3%;
+    }
+    
+    .desctop-users,
+    .mobile-users {
+        font-size: 0.9em;
+    }
+    
+    .mobile-users span,
+    .desctop-users span {
+        font-size: 6em;
+    }
+    
+    .background-left {
+        display: none;
+    }
+    
+}
+
+/* Large Devices */
+@media only screen and (min-width: 981px) {
+    .container {
+        max-width: 1800px;
+    }
+    
+    body {
+        font-size: 40px;
+    }
+    
+    header {
+        background-color: #4296f3;
+    }
+    
+    .open-menu-btn {
+        display: none;  
+    }
+    
+    .main-menu {
+        display: inline-block;
+        position: static;
+        width: 100%;
+        margin-left: 6.4%;
+        height: 100%;
+    }
+    
+    .main-menu li {
+        display: inline-block;
+        margin-right: 2%;
+        padding-top: 0;
+        line-height: 0.5em;
+        margin-top: 10px
+    }
+    
+    .main-menu a {
+        font-size: 0.400em;
+        line-height: 0.400em;
+        border: 0;
+        vertical-align: middle;
+    }
+    
+    .main-nav {
+        background-color: #4296f3;
+        height: 65px;
+        overflow-x: hidden;
+    }
+    
+    .main-menu li:last-child {
+        position: absolute;
+        right: 3%;
+        top: 0;
+        margin: 0;
+    }
+    
+    .main-menu li .leave-request {
+        padding: 0;
+        margin-top: 22px;
+    }
+    
+    .main-logo {
+        top: 7px;
+    }
+    
+    h1 {
+        margin: 4.5% 18% 5% 18%;
+    }
+    
+    .mobile-users,
+    .desctop-users {
+        margin-bottom: 7%;
+        width: 18%;
+        font-size: 0.562em;
+    }
+    
+    .mobile-users {
+        margin-left: 17%;
+    }
+    
+    .desctop-users {
+        margin-right: 17%;
+    }
+    
+    .mobile-users span,
+    .desctop-users span {
+        font-size: 6.750em;
+    }
+    
+    footer {
+        position: relative;
+    }
+    
+    footer span {
+        font-size: 0.400em;
+        line-height: 1.7em
+    }
+    
+    .copyright,
+    .social,
+    .contacts {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        margin-top: 2.5%;
+    }
+    
+    .copyright {
+        float: left;    
+        margin-left: 3%;
+    }
+    
+    .contacts {
+        position: absolute;
+        top: 0;
+        right: 3%;
+    }
+    
+    .social {
+        float: right;
+        margin-right: 52%;
+        margin-bottom: 40px;
+    }
+    
+    .tel {
+        position: relative;
+    }
+    
+    .tel-time {
+        font-size: 1em;
+        position: absolute;
+        top: 0;
+        left: 165px;
+    }
+    
+    .icon-star-circled {
+        font-size: 0.7em;
+        vertical-align: 
+    }
+    
+    @keyframes go-left-right {
+    from {
+        right: 800px;
+    }
+    
+    to {
+        right: 0px;
+    }
+}
+    
+    .background-left {
+        display: block;
+    }
+}
