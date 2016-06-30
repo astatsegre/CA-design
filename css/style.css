@@ -189,31 +189,33 @@ main {
     height: 100%;
     position: absolute;
     top: 0;
-    background: url(../img/background-color-medium.png) no-repeat;
+    right: 40%;
+    background-color: #0097f2;
     background-position: center;
     background-size: cover;
     width: 100%;
     z-index: -1;
-    animation: go-left-right 3s ease;
+    animation: go-left-right 3.5s cubic-bezier(0, 0.1, 0, 1);
+    transform: skew(-20deg);
 }
 
 .background-left {
     display: none;
     width: 300px;
-    height: 100%;
+    height: 850px;
     position: absolute;
     margin-left: -280px;
-    background: url(../img/left-background.png);
+    background-color: #0097f2;
     z-index: 1;
 }
 
 @keyframes go-left-right {
     from {
-        right: 200px;
+        right: 100%;
     }
     
     to {
-        right: 0px;
+        right: 40%;
     }
 }
 
@@ -235,7 +237,7 @@ main {
 .desctop-users {
     float: right;
     width: 32%;
-    margin-right: 9%;
+    margin-right: 6%;
 }
 
 .mobile-users span,
@@ -251,7 +253,7 @@ footer {
     overflow: hidden;
     position: relative;
     z-index: 10;
-    min-height: 500px;
+
 }
 
 footer span {
@@ -530,18 +532,12 @@ footer span {
         font-size: 0.7em;
         vertical-align: 
     }
-    
-    @keyframes go-left-right {
-    from {
-        right: 800px;
-    }
-    
-    to {
-        right: 0px;
-    }
-}
-    
+
     .background-left {
         display: block;
+    }
+    
+    .back-slider { 
+        transform: skew(-35deg);
     }
 }
